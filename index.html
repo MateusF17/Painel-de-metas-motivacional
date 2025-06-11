@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Motivacional</title>
+    <!-- Importa a folha de estilos e a fonte do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Botão de Menu Hamburguer -->
+    <button id="menu-toggle-btn" class="menu-toggle">
+        &#9776; <!-- Código HTML para o ícone de três barras -->
+    </button>
+
+    <!-- Menu de Navegação Lateral -->
+    <nav id="side-menu" class="side-nav">
+        <ul>
+            <!-- Link para o Relógio Pomodoro (abrirá em nova aba) -->
+            <li><a href="https://mateusf17.github.io/Pomodoro/" target="_blank">Relógio Pomodoro</a></li>
+            <!-- Botão para acionar a troca de papel de parede -->
+            <li><button id="change-wallpaper-btn">Alterar Papel de Parede</button></li>
+        </ul>
+    </nav>
+    <!-- Input de arquivo, oculto, para o usuário selecionar a imagem -->
+    <input type="file" id="wallpaper-input" accept="image/*" style="display: none;">
+
+
+    <!-- Contêiner principal do painel -->
+    <div class="motivational-panel">
+        
+        <!-- Seção para data e hora -->
+        <div id="date-time-container">
+            <p id="weekday"></p>
+            <p id="full-date"></p>
+            <h1 id="clock"></h1>
+        </div>
+
+        <!-- Seção para a frase do dia -->
+        <div class="quote-container">
+            <p id="quote-of-the-day"></p>
+            <span>- Frase do Dia -</span>
+        </div>
+        
+        <!-- Seção: Meta do Dia e Contagem Regressiva -->
+        <div class="goal-section">
+            <div id="goal-display" class="goal-display-container">
+                <h3 id="goal-title">Sua Meta</h3>
+                <p id="goal-text">Defina seu objetivo abaixo.</p>
+                <div id="countdown-timer">
+                    <span id="countdown"></span>
+                </div>
+            </div>
+
+            <div class="goal-input-container">
+                <input type="text" id="goal-input" placeholder="Qual é a sua meta principal?">
+                <div class="date-input-wrapper">
+                    <label for="goal-date">Data Limite:</label>
+                    <input type="date" id="goal-date">
+                </div>
+                <button id="save-goal-btn">Salvar Meta</button>
+                <!-- Botão para controlar a música -->
+                <button id="music-toggle-btn">Tocar Música 🎵</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Elemento de áudio para a música de fundo -->
+    <audio id="background-music" loop src="https://www.youtube.com/watch?v=cyOnSOPGTrQ"></audio>
+
+    <!-- Importa o arquivo JavaScript no final do body -->
+    <script src="script.js"></script>
+
+</body>
+</html>

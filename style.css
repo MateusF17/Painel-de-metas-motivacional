@@ -1,0 +1,256 @@
+/* style.css */
+
+/* Reseta as configurações padrão do navegador */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo geral do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Fundo com gradiente linear como padrão */
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    transition: background-image 0.5s ease-in-out;
+}
+
+/* --- ESTILOS DO NOVO MENU LATERAL --- */
+.menu-toggle {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding-top: 80px;
+}
+
+.side-nav.open {
+    transform: translateX(0);
+}
+
+.side-nav ul {
+    list-style: none;
+}
+
+.side-nav ul li {
+    margin: 20px;
+}
+
+.side-nav ul li a,
+.side-nav ul li button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+.side-nav ul li a:hover,
+.side-nav ul li button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- FIM DOS ESTILOS DO MENU --- */
+
+
+/* Painel principal com efeito de vidro (glassmorphism) */
+.motivational-panel {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 800px;
+}
+
+/* Contêiner da data e hora */
+#date-time-container {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Estilo do dia da semana */
+#weekday {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+/* Estilo da data completa */
+#full-date {
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin: 5px 0 15px;
+}
+
+/* Relógio principal, com destaque visual */
+#clock {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo da frase do dia */
+#quote-of-the-day {
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    min-height: 80px;
+}
+
+/* Estilo do subtítulo da frase */
+.quote-container span {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+}
+
+/* Seção da Meta */
+.goal-section {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.goal-display-container {
+    margin-bottom: 20px;
+}
+
+#goal-title {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+#goal-text {
+    font-size: 1.1rem;
+    min-height: 30px;
+}
+
+#countdown {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #f0db4f;
+    margin-top: 10px;
+    display: block;
+}
+
+.goal-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+#goal-input, #goal-date {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#goal-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.date-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#goal-date {
+    max-width: 160px;
+}
+
+#save-goal-btn, #music-toggle-btn {
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    width: 100%;
+    max-width: 250px;
+}
+
+#save-goal-btn {
+    background-color: #f0db4f;
+}
+
+#save-goal-btn:hover {
+    background-color: #f9e77c;
+    transform: scale(1.05);
+}
+
+#music-toggle-btn {
+    background-color: #a097f7;
+}
+
+#music-toggle-btn:hover {
+    background-color: #b9b2ff;
+    transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+    .motivational-panel { padding: 20px; }
+    #weekday { font-size: 1.4rem; }
+    #full-date { font-size: 1rem; }
+    #clock { font-size: 3.5rem; }
+    #quote-of-the-day { font-size: 1.2rem; min-height: 100px; }
+    #countdown { font-size: 1.5rem; }
+}
