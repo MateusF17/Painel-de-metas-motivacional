@@ -2,9 +2,6 @@
 
 Bem-vindo ao **Painel Motivacional**, uma aplicação web criada para inspirar e ajudar a manter o foco em seus objetivos diários. Este painel combina funcionalidades de produtividade com um design moderno e relaxante, ideal para ser usado em telas de trabalho ou monitores secundários.
 
-![Imagem de pré-visualização do painel motivacional](https://placehold.co/800x400/667eea/ffffff?text=Painel+Motivacional)
-*Uma pré-visualização da interface principal da aplicação.*
-
 ---
 
 ## 🚀 Funcionalidades
